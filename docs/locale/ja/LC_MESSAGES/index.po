@@ -4,7 +4,6 @@
 # package.
 # Julien Rouhaud <rjuju123@gmail.com>, 2023.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: pg_hint_plan \n"

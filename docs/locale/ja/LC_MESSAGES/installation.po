@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the pg_hint_plan
 # package.
 # Julien Rouhaud <rjuju123@gmail.com>, 2023.
-# Tatsuro Yamada <yamatattsu@gmail.com>, 2023.
+# Tatsuro Yamada <yamatattsu@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: pg_hint_plan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 10:50+0900\n"
-"PO-Revision-Date: 2023-11-10 08:29+0900\n"
+"POT-Creation-Date: 2026-07-25 11:41+0900\n"
+"PO-Revision-Date: 2026-07-25 17:54+0900\n"
 "Last-Translator: Tatsuro Yamada <yamatattsu@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -19,21 +19,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.9\n"
 
-#: ../../installation.md:1 fadb13f484a44269a9b76df61f8dc618
+#: ../../installation.md:1 13573b85ebae446d863e3146e552ed9e
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../installation.md:3 aa2c540a272a419e875bd684665aad1c
+#: ../../installation.md:3 0240a71e99634f88ab8d3f7faddc112d
 msgid "This section describes the installation steps."
 msgstr "このセクションはpg_hint_planのインストール方法について説明します。"
 
-#: ../../installation.md:5 fba567f87a4d49eab2495a3fc80c791b
-msgid "building binary module"
-msgstr "ビルド"
+#: ../../installation.md:5 3766f00bc7bf43d194733a298c45e8dd
+msgid "Building binary module"
+msgstr "バイナリモジュールの作成"
 
-#: ../../installation.md:7 c0d348a44efd4fb7a24080a8c3ba5473
+#: ../../installation.md:7 6be9c53600bd46af85b125aa0eb8ac87
 msgid ""
 "Simply run `make` at the top of the source tree, then `make install` as "
 "an appropriate user. The `PATH` environment variable should be set "
@@ -43,11 +43,35 @@ msgstr ""
 "行してください。環境変数 `PATH` は、PostgreSQLのバイナリを指すように適切"
 "に設定する必要があります。"
 
-#: ../../installation.md:17 e97c510e8ca24eb5919c2a5fef6d1f47
+#: ../../installation.md:17 f4a8eb31353c44298ac031b859ebb519
+msgid "Installing from a binary package"
+msgstr "バイナリパッケージからのインストール"
+
+#: ../../installation.md:19 b6cd27a8505341f4917aa9b4ac5fd88e
+msgid ""
+"On Debian and Ubuntu `pg_hint_plan` is available as a binary package "
+"from the pgdg (PostgreSQL Global Development Group) repository.  "
+"Assuming you've already added the repository to `apt` sources, "
+"installing the package is as simple as:"
+msgstr ""
+"DebianおよびUbuntuでは、`pg_hint_plan` は PostgreSQL Global Development "
+"Group (PGDG) リポジトリからバイナリパッケージとして利用できます。既にリポ"
+"ジトリを `apt` ソースに追加している場合、パッケージのインストールは以下の"
+"通りです。"
+
+#: ../../installation.md:28 9d361cb99f384bc5850619cd96c99c66
+msgid ""
+"Please visit https://www.postgresql.org/download/linux/ if you need help "
+"at adding the repository."
+msgstr ""
+"リポジトリの追加に関してヘルプが必要な場合は、 https://"
+"www.postgresql.org/download/linux/ を参照してください。"
+
+#: ../../installation.md:31 a23c2115e2d54c4dbddc9bfd8c908297
 msgid "Loading `pg_hint_plan`"
 msgstr "`pg_hint_plan`のロード"
 
-#: ../../installation.md:19 1c8ec801902f429d8e695cf03dc089c1
+#: ../../installation.md:33 8f23ab2763154675917d70b01237b271
 msgid ""
 "`pg_hint_plan` does not require `CREATE EXTENSION`.  Loading it with a "
 "`LOAD` command will activate it and of course you can load it globally "
@@ -61,10 +85,10 @@ msgstr ""
 "す。また、特定のユーザに対し自動的にロードするための`ALTER USER SET`/"
 "`ALTER DATABASE SET`に興味があるかもしれません。"
 
-#: ../../installation.md:30 9cad4df70ec04fa594d93a476c9f8f02
+#: ../../installation.md:44 45892aec35af41339e523a7b29a517fa
 msgid ""
-"Run `CREATE EXTENSION` and `SET pg_hint_plan.enable_hint_table TO on` "
-"if you are planning to use the hint table."
+"Run `CREATE EXTENSION` and `SET pg_hint_plan.enable_hint_table TO on` if "
+"you are planning to use the hint table."
 msgstr ""
 "ヒントテーブルを使用する場合は、`CREATE EXTENSION` を実行し`SET "
 "pg_hint_plan.enable_hint_table TO on`を実行してください。"
