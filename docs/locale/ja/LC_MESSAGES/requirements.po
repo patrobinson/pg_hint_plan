@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the pg_hint_plan
 # package.
 # Julien Rouhaud <rjuju123@gmail.com>, 2023.
-# Tatsuro Yamada <yamatattsu@gmail.com>, 2023.
+# Tatsuro Yamada <yamatattsu@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: pg_hint_plan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 10:50+0900\n"
-"PO-Revision-Date: 2023-11-10 08:31+0900\n"
+"POT-Creation-Date: 2026-07-25 22:11+0900\n"
+"PO-Revision-Date: 2026-07-25 22:15+0900\n"
 "Last-Translator: Tatsuro Yamada <yamatattsu@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -19,63 +19,63 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.9\n"
 
-#: ../../requirements.md:1 26f3405d14e1471d98d797d27f70f0e1
+#: ../../requirements.md:1 06eb02f7765540c98ec55bf14861bd6c
 msgid "Requirements"
 msgstr "動作環境"
 
-#: ../../requirements.md:3 e2a338fd547c4102a8ba452a1ce76fe4
-msgid "pg_hint_plan 1.8 requires PostgreSQL 18."
-msgstr "pg_hint_plan 1.8 は PostgreSQL 18 のみをサポートします。"
+#: ../../requirements.md:3 f8b480eb79bd4a44aa87a1d31fdb7c06
+msgid "pg_hint_plan 2.0 requires PostgreSQL 20."
+msgstr "pg_hint_plan 2.0 は PostgreSQL 20 のみをサポートします。"
 
-#: ../../requirements.md:5 2f43757380444e08ab0e181a788a1b78
+#: ../../requirements.md:5 1b51e5bc97b6450dbbb050f317a3f32b
 msgid "PostgreSQL versions tested"
 msgstr "テスト済みのPostgreSQLバージョン"
 
-#: ../../requirements.md:7 744d9ef1bc3240a9af15e103cf476a19
-msgid "Version 18"
-msgstr "・バージョン 18"
+#: ../../requirements.md:7 1210ae1c91004cf08caf3a835c1e3a97
+msgid "Version 20"
+msgstr "・バージョン 20"
 
-#: ../../requirements.md:9 27a4d38176f445efaec1e1f5367ab674
+#: ../../requirements.md:9 fa19dd02262544208570892d1f2fa142
 msgid "OS versions tested"
 msgstr "テスト済みのOSバージョン"
 
-#: ../../requirements.md:11 eb5a718ba289445eb2478b2650b23bfd
+#: ../../requirements.md:11 af363172499f498282f2c9e959d66d9b
 msgid "CentOS 8.5"
 msgstr "・CentOS 8.5"
 
-#: ../../requirements.md:13 4f3befbd04964972b9a7fb70ba217dfe
+#: ../../requirements.md:13 81475d92bae141b08e18ba201cff4810
 msgid "See also"
 msgstr "関連項目"
 
-#: ../../requirements.md:16 13bf779462964c18a3e97148198d04f3
+#: ../../requirements.md:16 7dfb866ebfeb449899d95faa8de457b4
 msgid "References"
 msgstr ""
 
-#: ../../requirements.md:18 554dc9beb49d4774a7e3c99e426cc9c1
+#: ../../requirements.md:18 018b6e2556af442d8f348f33031e927c
 msgid "[EXPLAIN](http://www.postgresql.org/docs/current/static/sql-explain.html)"
 msgstr "[EXPLAIN](http://www.postgresql.org/docs/current/static/sql-explain.html)"
 
-#: ../../requirements.md:19 f960539e7df047a39a37f7660b8ed5e5
+#: ../../requirements.md:19 a8eefceb87804e09b394c813cb2a6b65
 msgid "[SET](http://www.postgresql.org/docs/current/static/sql-set.html)"
 msgstr "[SET](http://www.postgresql.org/docs/current/static/sql-set.html)"
 
-#: ../../requirements.md:20 bab201f98ce04f06a704b1f766459215
+#: ../../requirements.md:20 2a1b733a8a15441fa6dc6ec5f71488a3
 msgid ""
-"[Server Config](http://www.postgresql.org/docs/current/static/runtime-config."
-"html)"
+"[Server Config](http://www.postgresql.org/docs/current/static/runtime-"
+"config.html)"
 msgstr ""
-"[Server Config](http://www.postgresql.org/docs/current/static/runtime-config."
-"html)"
+"[Server Config](http://www.postgresql.org/docs/current/static/runtime-"
+"config.html)"
 
-#: ../../requirements.md:21 562b990d519e4102a2fe16ae980a37ef
+#: ../../requirements.md:21 ce2dc58d5be4477da8d2308ec0c31b68
 msgid ""
-"[Parallel Plans](http://www.postgresql.org/docs/current/static/parallel-plans."
-"html)"
+"[Parallel Plans](http://www.postgresql.org/docs/current/static/parallel-"
+"plans.html)"
 msgstr ""
-"[Parallel Plans](http://www.postgresql.org/docs/current/static/parallel-plans."
-"html)"
+"[Parallel Plans](http://www.postgresql.org/docs/current/static/parallel-"
+"plans.html)"
 
 #~ msgid "PostgreSQL documents"
 #~ msgstr "PostgreSQLドキュメント"
