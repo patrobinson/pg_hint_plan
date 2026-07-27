@@ -3437,6 +3437,12 @@ restrict_indexes(PlannerInfo *root, ScanMethodHint *hint, RelOptInfo *rel,
 		ListCell	   *l;
 		bool			use_index = false;
 
+		if (indexname == NULL)
+		{
+			unused_indexes = lappend_oid(unused_indexes, info->indexoid);
+			continue;
+		}
+
 		foreach(l, hint->indexnames)
 		{
 			char   *hintname = (char *) lfirst(l);
