@@ -1,0 +1,54 @@
+-- Test hypothetical indexes with hypopg
+-- Skip test if hypopg is not installed.
+SELECT count(*) = 0 AS hypopg_missing FROM pg_available_extensions
+  WHERE name = 'hypopg' \gset
+\if :hypopg_missing
+\quit
+\endif
+LOAD 'pg_hint_plan';
+CREATE EXTENSION hypopg;
+CREATE TABLE hypopg_t1(a int, b int, c int);
+CREATE INDEX hypopg_t1_a_idx ON hypopg_t1 (a);
+SELECT hypopg_create_index('CREATE INDEX hypopg_t1_b_idx ON hypopg_t1 (b)');
+       hypopg_create_index        
+----------------------------------
+ (13630,<13630>btree_hypopg_t1_b)
+(1 row)
+
+EXPLAIN (COSTS OFF) SELECT /*+ IndexScan(hypopg_t1 hypopg_t1_a_idx) */
+  FROM hypopg_t1 WHERE a = 3 AND b = 4;
+                  QUERY PLAN                   
+-----------------------------------------------
+ Index Scan using hypopg_t1_a_idx on hypopg_t1
+   Index Cond: (a = 3)
+   Filter: (b = 4)
+(3 rows)
+
+EXPLAIN (COSTS OFF) SELECT /*+ IndexScan(hypopg_t1 hypopg_t1_b_idx) */
+  FROM hypopg_t1 WHERE a = 3 AND b = 4;
+                         QUERY PLAN                          
+-------------------------------------------------------------
+ Bitmap Heap Scan on hypopg_t1
+   Recheck Cond: ((b = 4) AND (a = 3))
+   ->  BitmapAnd
+         ->  Bitmap Index Scan on "<13630>btree_hypopg_t1_b"
+               Index Cond: (b = 4)
+         ->  Bitmap Index Scan on hypopg_t1_a_idx
+               Index Cond: (a = 3)
+(7 rows)
+
+EXPLAIN (COSTS OFF) SELECT /*+ IndexScan(hypopg_t1 btree_hypopg_t1_b) */
+  FROM hypopg_t1 WHERE a = 3 AND b = 4;
+                         QUERY PLAN                          
+-------------------------------------------------------------
+ Bitmap Heap Scan on hypopg_t1
+   Recheck Cond: ((b = 4) AND (a = 3))
+   ->  BitmapAnd
+         ->  Bitmap Index Scan on "<13630>btree_hypopg_t1_b"
+               Index Cond: (b = 4)
+         ->  Bitmap Index Scan on hypopg_t1_a_idx
+               Index Cond: (a = 3)
+(7 rows)
+
+DROP TABLE hypopg_t1;
+DROP EXTENSION hypopg;
